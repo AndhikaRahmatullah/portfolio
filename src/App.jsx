@@ -35,7 +35,6 @@ const App = () => {
 			portfolioTop = portfolio.offsetTop - 10,
 			contactTop = contact.offsetTop - 10,
 			footerTop = footer.offsetTop - 10;
-		console.log("window.pageYOffset :", window.pageYOffset);
 
 		if (window.pageYOffset > fixedNav) {
 			navigation.classList.add("navbar-fixed");
