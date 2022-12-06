@@ -87,9 +87,9 @@ const Hero = () => {
 
 	return (
 		<div
-			className="container flex flex-wrap items-center justify-center gap-5 pt-20 lg:justify-between lg:pt-32 lg:pb-16"
+			className="flex flex-wrap items-center justify-center gap-5 pt-20 transition-all duration-500 dark:bg-dark lg:justify-between lg:pt-32 lg:pb-16"
 			id="home">
-			<div className="flex flex-col items-center justify-center gap-6 md:items-start">
+			<div className="container flex flex-col items-center justify-center gap-6 px-[100px] md:items-start">
 				<motion.div
 					variants={variantsHero}
 					initial="hidden"
@@ -103,14 +103,14 @@ const Hero = () => {
 
 					<motion.p
 						variants={variantsHeroChild}
-						className="mb-3 text-center text-4xl font-bold text-dark md:mb-0 md:text-start lg:text-5xl">
+						className="mb-3 text-center text-4xl font-bold text-dark dark:text-white md:mb-0 md:text-start lg:text-5xl">
 						Andhika Rahmatullah
 					</motion.p>
 
 					<motion.p
 						variants={variantsHeroChild}
-						className="text-center text-xl font-light md:text-start lg:text-2xl">
-						<span className="block  text-neutral-500 md:inline-block">Mahasiswa &</span> Frontend Web Developer
+						className="text-center text-xl font-light text-dark dark:text-white md:text-start lg:text-2xl">
+						<span className="block text-neutral-500 md:inline-block">Mahasiswa &</span> Frontend Web Developer
 					</motion.p>
 				</motion.div>
 
@@ -171,10 +171,10 @@ const Hero = () => {
 				variants={variantsHero3}
 				initial="hidden"
 				animate="show"
-				className="relative flex items-center justify-center">
+				className="container relative flex items-center justify-center">
 				<motion.span
 					variants={variantsHeroChild3}
-					className="absolute bottom-6 -z-10 md:bottom-0">
+					className="absolute bottom-6 md:bottom-0">
 					<svg
 						className="h-[250px] w-[250px] md:h-[350px] md:w-[350px] lg:h-[400px] lg:w-[400px] "
 						viewBox="0 0 200 200"
@@ -190,7 +190,7 @@ const Hero = () => {
 					variants={variantsHeroChild3}
 					src={require("../assets/foto.png")}
 					alt="2"
-					className="h-[305px] w-[295px] md:h-[400px] md:w-[390px] lg:h-[446px] lg:w-[430px]"
+					className="relative z-10 h-[305px] w-[295px] md:h-[400px] md:w-[390px] lg:h-[446px] lg:w-[430px]"
 				/>
 			</motion.div>
 		</div>

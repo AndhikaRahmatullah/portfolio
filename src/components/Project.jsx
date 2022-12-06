@@ -4,7 +4,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 	return (
 		<div
 			id="portfolio"
-			className={projectItem ? "bg-neutral-100 py-20 transition-all duration-500 lg:py-32" : "bg-transparent py-20 transition-all duration-500 lg:py-32"}>
+			className={projectItem ? "bg-neutral-200 py-20 transition-all duration-500 dark:bg-neutral-800 lg:py-32" : "bg-transparent py-20 transition-all duration-500 dark:bg-dark lg:py-32"}>
 			{projectItem && (
 				<motion.p
 					initial={{ opacity: 0 }}
@@ -22,7 +22,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 20, damping: 5 }}
 						className="mb-8 flex flex-col items-center justify-center gap-5 lg:mx-72 lg:mb-16">
-						<p className="text-center text-4xl font-bold tracking-wide text-dark lg:text-5xl">Proyek Terbaru</p>
+						<p className="text-center text-4xl font-bold tracking-wide text-dark dark:text-white lg:text-5xl">Proyek Terbaru</p>
 						<p className="text-center text-base leading-snug text-neutral-500 lg:text-lg">Berikut beberapa Website yang telah saya kembangkan baik dalam bentuk Aplikasi Website maupun Website Statis.</p>
 					</motion.div>
 				)}
@@ -57,7 +57,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1, delay: 2, type: "spring", stiffness: 20, damping: 5 }}
 						className="flex flex-col items-center justify-center gap-2 lg:mx-[150px]">
-						<p className="text-center text-xl font-semibold tracking-wide text-dark lg:text-2xl">Movie Search</p>
+						<p className="text-center text-xl font-semibold tracking-wide text-dark dark:text-white lg:text-2xl">Movie Search</p>
 						<p className="text-justify text-base text-neutral-500 lg:text-center">Sebuah Aplikasi Website untuk pecarian film yang sedang tayang, maupun sudah tayang diberbagai belahan Dunia. Tampilan yang sederhana namun elegan dengan balutan efek transisi pada tampilan awal disetiap halaman. Tidak lupa juga fitur "Detail Film" pada setiap film yang berisi beberapa data tetang film tersebut.</p>
 
 						<motion.a
@@ -80,7 +80,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 						initial={{ opacity: 0, x: 100 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1, type: "spring", stiffness: 20, damping: 5 }}
-						className="mb-7 text-start text-xl font-bold tracking-wide text-dark lg:text-2xl 2xl:mx-[150px]">
+						className="mb-7 text-start text-xl font-bold tracking-wide text-dark dark:text-white lg:text-2xl 2xl:mx-[150px]">
 						Proyek Lainnya
 					</motion.p>
 				)}
@@ -109,7 +109,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 											initial={{ opacity: 0, x: 100 }}
 											animate={{ opacity: 1, x: 0 }}
 											transition={{ duration: 1, delay: 1, type: "spring", stiffness: 20, damping: 5 }}
-											className="text-lg font-semibold tracking-wide text-dark lg:text-xl">
+											className="text-lg font-semibold tracking-wide text-dark dark:text-white lg:text-xl">
 											Share Story
 										</motion.p>
 
@@ -159,7 +159,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 											initial={{ opacity: 0, x: 100 }}
 											animate={{ opacity: 1, x: 0 }}
 											transition={{ duration: 1, delay: 4, type: "spring", stiffness: 20, damping: 5 }}
-											className="text-lg font-semibold tracking-wide text-dark lg:text-xl">
+											className="text-lg font-semibold tracking-wide text-dark dark:text-white lg:text-xl">
 											E-Commerce
 										</motion.p>
 

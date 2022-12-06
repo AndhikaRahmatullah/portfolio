@@ -14,7 +14,7 @@ const BackToTop = ({ showIcon }) => {
 						<img
 							src="https://img.icons8.com/fluency/512/collapse-arrow.png"
 							alt="back top"
-							className="fixed right-4 bottom-4 w-[45px] rounded-full border-2 border-primary p-2 hover:animate-pulse md:w-[50px]"
+							className="fixed right-4 bottom-4 z-30 w-[45px] rounded-full border-2 border-primary p-2 hover:animate-pulse md:w-[50px]"
 						/>
 					</a>
 				</motion.div>

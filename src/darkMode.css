@@ -1,0 +1,76 @@
+.switch {
+	display: inline-block;
+	width: 60px;
+	height: 30px;
+	right: -40px;
+	bottom: -28px;
+}
+@media screen and (min-width: 375px) {
+	.switch {
+		position: static;
+		right: 0px;
+		bottom: -25px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.switch {
+		position: absolute;
+		right: -40px;
+		bottom: -28px;
+	}
+}
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #0fcfff;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 2px;
+	background-color: transparent;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+input:checked + .slider {
+	background-color: #0891b2;
+}
+/* input + .slider {
+	box-shadow: 0 0 5px #000000;
+} */
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+.slider.round:before {
+	background-image: url("https://img.icons8.com/emoji/512/sun-emoji.png");
+	background-position: center;
+	background-size: 30px;
+	border-radius: 50%;
+}
+input:checked + .slider.round:before {
+	background-image: url("https://img.icons8.com/emoji/512/new-moon-emoji.png");
+	background-size: 30px;
+	background-position: center;
+	border-radius: 50%;
+	background-color: transparent;
+}

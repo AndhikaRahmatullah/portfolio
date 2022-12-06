@@ -5,7 +5,7 @@ const About = ({ aboutItem }) => {
 	return (
 		<div
 			id="about"
-			className={aboutItem ? "bg-neutral-100 transition-all duration-500" : "bg-transparent transition-all duration-500"}>
+			className={aboutItem ? "bg-neutral-200 transition-all duration-500 dark:bg-neutral-800" : "bg-transparent transition-all duration-500 dark:bg-dark"}>
 			<div className="container py-20 lg:py-32">
 				{aboutItem && (
 					<motion.p
@@ -24,7 +24,7 @@ const About = ({ aboutItem }) => {
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 20, damping: 5 }}
 							className="flex flex-col justify-center gap-3 lg:w-[600px]">
-							<p className="text-3xl font-semibold tracking-wide text-dark lg:text-4xl">
+							<p className="text-3xl font-semibold tracking-wide text-dark dark:text-white lg:text-4xl">
 								Mahasiswa <span className="block">Teknik Informatika</span>
 							</p>
 							<p className="text-base leading-snug text-neutral-500 lg:text-lg">Saya adalah Mahasiswa aktif Strata Satu (S1) disalah satu Perguruan Tinggi di Kota Bogor, tepatnya di Universitas Ibn Khaldun Bogor. Dengan penjurusan Teknik Informatika yang saya tempuh, akan sangat membantu dalam perkembangan diri dibidang Teknologi itu sendiri.</p>
@@ -38,7 +38,7 @@ const About = ({ aboutItem }) => {
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1, delay: 1, type: "spring", stiffness: 20, damping: 5 }}
 							className="flex flex-col justify-center gap-3 lg:w-[600px]">
-							<p className="text-3xl font-semibold tracking-wide text-dark lg:text-4xl">
+							<p className="text-3xl font-semibold tracking-wide text-dark dark:text-white lg:text-4xl">
 								Frontend <span className="block">Web Developer</span>
 							</p>
 							<p className="text-base leading-snug text-neutral-500 lg:text-lg">Memiliki kemampuan dalam Bahasa Pemrograman Javascript. Dengan library React atau Vue pada bagian Frontend yang saya gunakan untuk Website yang dikembangkan.</p>
