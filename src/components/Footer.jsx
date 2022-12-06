@@ -1,7 +1,7 @@
 const Footer = ({ footerItem, contactItem }) => {
 	return (
 		<div
-			className={footerItem && contactItem ? "bg-dark pt-10 pb-2 transition-all duration-500 lg:pt-20" : "bg-transparent pt-10 pb-2 transition-all duration-500 lg:pt-20"}
+			className={footerItem && contactItem ? "bg-dark pt-10 pb-2 transition-all duration-500 dark:bg-neutral-800 lg:pt-20" : "bg-transparent pt-10 pb-2 transition-all duration-500 dark:bg-dark lg:pt-20"}
 			id="footer">
 			<div className="container mb-5 flex flex-col items-center justify-between gap-10 md:mb-10 lg:mb-20 lg:flex-row ">
 				{/* name */}

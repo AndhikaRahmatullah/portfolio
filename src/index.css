@@ -13,11 +13,11 @@ body {
 }
 
 .navbar-fixed {
-	@apply fixed z-[9999] bg-white bg-opacity-80 shadow-lg shadow-neutral-500/10 backdrop-blur;
+	@apply fixed z-[9999] bg-white bg-opacity-80 shadow-lg shadow-neutral-500/10 backdrop-blur transition-all duration-500 dark:bg-dark dark:bg-opacity-50;
 }
 
 .hamburger-line {
-	@apply my-2 block h-[2px] w-[30px] bg-dark;
+	@apply my-2 block h-[2px] w-[30px] bg-dark transition-all duration-500 dark:bg-white;
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -37,7 +37,7 @@ body {
 }
 
 .list-skills {
-	@apply text-3xl font-bold tracking-wide text-dark lg:text-4xl;
+	@apply text-3xl font-bold tracking-wide text-dark dark:text-white lg:text-4xl;
 }
 
 .list-skill-child {
