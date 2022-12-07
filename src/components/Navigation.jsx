@@ -1,6 +1,9 @@
 import DarkMode from "./DarkMode";
+import Language from "./Language";
+import { useLanguage } from "../context/languages";
 
 const Navigation = ({ title }) => {
+	const { CurrentLanguage } = useLanguage();
 	const hamburger = document.getElementById("hamburger");
 	const navMenu = document.getElementById("nav-menu");
 
@@ -45,26 +48,26 @@ const Navigation = ({ title }) => {
 					<nav
 						id="nav-menu"
 						className="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg shadow-dark/50 dark:bg-dark dark:shadow-neutral-500/50 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none dark:lg:bg-transparent">
-						<ul className="flex flex-col gap-2 lg:flex-row">
+						<ul className="flex flex-col items-start gap-2 lg:flex-row lg:items-center">
 							<li className="group">
 								<a
 									href="#home"
 									className="mx-5 py-2 text-sm text-dark group-hover:text-primary dark:text-white lg:mx-3 lg:text-base">
-									Beranda
+									{CurrentLanguage === "Indonesia" ? "Beranda" : "Home"}
 								</a>
 							</li>
 							<li className="group">
 								<a
 									href="#about"
 									className="mx-5 py-2 text-sm text-dark group-hover:text-primary dark:text-white lg:mx-3 lg:text-base">
-									Tentang Saya
+									{CurrentLanguage === "Indonesia" ? "Tentang Saya" : "About Me"}
 								</a>
 							</li>
 							<li className="group">
 								<a
 									href="#skills"
 									className="mx-5 py-2 text-sm text-dark group-hover:text-primary dark:text-white lg:mx-3 lg:text-base">
-									Keterampilan
+									{CurrentLanguage === "Indonesia" ? "Keterampilan" : "Skills"}
 								</a>
 							</li>
 							<li className="group">
@@ -77,9 +80,12 @@ const Navigation = ({ title }) => {
 							<li className="group">
 								<a
 									href="#contact"
-									className="mx-5 py-2 text-base text-dark group-hover:text-primary dark:text-white lg:mx-3">
-									Kontak
+									className="mx-5 py-2 text-sm text-dark group-hover:text-primary dark:text-white lg:mx-3 lg:text-base">
+									{CurrentLanguage === "Indonesia" ? "Kontak" : "Contact"}
 								</a>
+							</li>
+							<li className="group">
+								<Language />
 							</li>
 							<li className="group">
 								<DarkMode />

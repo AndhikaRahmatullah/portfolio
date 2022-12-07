@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/languages";
 
 const Project = ({ projectItem, projectItem2 }) => {
+	const { CurrentLanguage } = useLanguage();
+
 	return (
 		<div
 			id="portfolio"
@@ -22,8 +25,8 @@ const Project = ({ projectItem, projectItem2 }) => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 20, damping: 5 }}
 						className="mb-8 flex flex-col items-center justify-center gap-5 lg:mx-72 lg:mb-16">
-						<p className="text-center text-4xl font-bold tracking-wide text-dark dark:text-white lg:text-5xl">Proyek Terbaru</p>
-						<p className="text-center text-base leading-snug text-neutral-500 lg:text-lg">Berikut beberapa Website yang telah saya kembangkan baik dalam bentuk Aplikasi Website maupun Website Statis.</p>
+						<p className="text-center text-4xl font-bold tracking-wide text-dark dark:text-white lg:text-5xl">{CurrentLanguage === "Indonesia" ? "Proyek Terbaru" : "Recent Project"}</p>
+						<p className="text-center text-base leading-snug text-neutral-500 lg:text-lg">{CurrentLanguage === "Indonesia" ? "Berikut beberapa Website yang telah saya kembangkan baik dalam bentuk Aplikasi Website maupun Website Statis." : "Here are some Websites that I have developed both in the form of Website Applications and Static Websites."}</p>
 					</motion.div>
 				)}
 
@@ -58,7 +61,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 						transition={{ duration: 1, delay: 2, type: "spring", stiffness: 20, damping: 5 }}
 						className="flex flex-col items-center justify-center gap-2 lg:mx-[150px]">
 						<p className="text-center text-xl font-semibold tracking-wide text-dark dark:text-white lg:text-2xl">Movie Search</p>
-						<p className="text-justify text-base text-neutral-500 lg:text-center">Sebuah Aplikasi Website untuk pecarian film yang sedang tayang, maupun sudah tayang diberbagai belahan Dunia. Tampilan yang sederhana namun elegan dengan balutan efek transisi pada tampilan awal disetiap halaman. Tidak lupa juga fitur "Detail Film" pada setiap film yang berisi beberapa data tetang film tersebut.</p>
+						<p className="text-justify text-base text-neutral-500 lg:text-center">{CurrentLanguage === "Indonesia" ? "Sebuah Aplikasi Website untuk pecarian film yang sedang tayang, maupun sudah tayang diberbagai belahan Dunia. Tampilan yang sederhana namun elegan dengan balutan efek transisi pada tampilan awal disetiap halaman. Tidak lupa juga fitur 'Detail Film' pada setiap film yang berisi beberapa data tetang film tersebut." : "A website application for searching for films that are currently showing or have already been shown in various parts of the world. A simple but elegant display with a transition effect on the initial appearance of each page. Don't forget the 'Details Movie' feature for each film which contains some data about the film."}</p>
 
 						<motion.a
 							initial={{ opacity: 0, y: 100 }}
@@ -67,7 +70,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 							href="https://movies-react-xi.vercel.app/"
 							target="_blank"
 							className="mt-5 w-fit rounded-lg bg-primary p-2 text-sm font-semibold tracking-wider text-white lg:text-base">
-							Lihat Selengkapnnya
+							{CurrentLanguage === "Indonesia" ? "Lihat Selengkapnnya" : "See More"}
 						</motion.a>
 					</motion.div>
 				)}
@@ -81,7 +84,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1, type: "spring", stiffness: 20, damping: 5 }}
 						className="mb-7 text-start text-xl font-bold tracking-wide text-dark dark:text-white lg:text-2xl 2xl:mx-[150px]">
-						Proyek Lainnya
+						{CurrentLanguage === "Indonesia" ? "Proyek Lainnya" : "Other Projects"}
 					</motion.p>
 				)}
 
@@ -118,7 +121,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 											animate={{ opacity: 1, x: 0 }}
 											transition={{ duration: 1, delay: 1.5, type: "spring", stiffness: 20, damping: 5 }}
 											className="text-justify text-base leading-snug text-neutral-500">
-											Sebuah Aplikasi Website berbentuk forum untuk berbagi cerita antar User yang menggunakan Aplikasi tersebut. Dengan fitur realtime data, status atau pesan akan otomatis terupdate tanpa direfresh, walaupun sedang digunakan oleh beberapa akun berbeda.
+											{CurrentLanguage === "Indonesia" ? "Sebuah Aplikasi Website berbentuk forum untuk berbagi cerita antar User yang menggunakan Aplikasi tersebut. Dengan fitur realtime data, status atau pesan akan otomatis terupdate tanpa direfresh, walaupun sedang digunakan oleh beberapa akun berbeda." : "A website application is in the form of a forum to share stories between users who use the application. With the realtime data feature, status or messages will be updated automatically without being refreshed, even though they are being used by several different accounts."}
 										</motion.p>
 
 										<motion.a
@@ -128,7 +131,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 											href="https://belalang-biru-reborn-master.vercel.app/"
 											target="_blank"
 											className="w-fit text-sm font-semibold tracking-wide text-primary lg:text-base">
-											Lihat Selengkapnya
+											{CurrentLanguage === "Indonesia" ? "Lihat Selengkapnya" : "See More"}
 										</motion.a>
 									</>
 								)}
@@ -168,7 +171,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 											animate={{ opacity: 1, x: 0 }}
 											transition={{ duration: 1, delay: 4.5, type: "spring", stiffness: 20, damping: 5 }}
 											className="text-justify text-base leading-snug text-neutral-500">
-											Sebuah Aplikasi Website dengan tema Toko Online. Seperti Toko Online pada umumnya, didalamnya terdapat fitur seperti Detail Produk, Keranjang, Kategori serta Halaman Pembayaran.
+											{CurrentLanguage === "Indonesia" ? "Sebuah Aplikasi Website dengan tema Toko Online. Seperti Toko Online pada umumnya, didalamnya terdapat fitur seperti Detail Produk, Keranjang, Kategori serta Halaman Pembayaran." : "A Website Application with an Online Store theme. Like online stores in general, it includes features such as product details, baskets, categories and payment pages."}
 										</motion.p>
 
 										<motion.a
@@ -178,7 +181,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 											href="http://www.shepiedika.byethost7.com/?i=1"
 											target="_blank"
 											className="w-fit text-sm font-semibold tracking-wide text-primary lg:text-base">
-											Lihat Selengkapnya
+											{CurrentLanguage === "Indonesia" ? "Lihat Selengkapnya" : "See More"}
 										</motion.a>
 									</>
 								)}
