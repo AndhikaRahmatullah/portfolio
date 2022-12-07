@@ -1,4 +1,8 @@
+import { useLanguage } from "../context/languages";
+
 const Footer = ({ footerItem, contactItem }) => {
+	const { CurrentLanguage } = useLanguage();
+
 	return (
 		<div
 			className={footerItem && contactItem ? "bg-dark pt-10 pb-2 transition-all duration-500 dark:bg-neutral-800 lg:pt-20" : "bg-transparent pt-10 pb-2 transition-all duration-500 dark:bg-dark lg:pt-20"}
@@ -12,17 +16,17 @@ const Footer = ({ footerItem, contactItem }) => {
 				<div className="flex basis-3/4 flex-col items-center justify-around gap-10 lg:flex-row lg:items-start">
 					{/* tautan */}
 					<div className="flex flex-col items-center gap-4 lg:items-start lg:gap-6">
-						<p className="text-lg font-bold tracking-wider text-white md:text-xl">Tautan</p>
+						<p className="text-lg font-bold tracking-wider text-white md:text-xl">{CurrentLanguage === "Indonesia" ? "Tautan" : "Sections"}</p>
 						<div className="flex flex-col items-center justify-start gap-2 text-base font-light tracking-wide text-neutral-100 lg:items-start lg:gap-3">
 							<a
 								href="#home"
 								className="transition-all duration-300 hover:text-primary">
-								Beranda
+								{CurrentLanguage === "Indonesia" ? "Beranda" : "Home"}
 							</a>
 							<a
 								href="#about"
 								className="transition-all duration-300 hover:text-primary">
-								Tentang Saya
+								{CurrentLanguage === "Indonesia" ? "Tentang Saya" : "About Me"}
 							</a>
 							<a
 								href="#portfolio"
@@ -32,14 +36,14 @@ const Footer = ({ footerItem, contactItem }) => {
 							<a
 								href="#contact"
 								className="transition-all duration-300 hover:text-primary">
-								Kontak
+								{CurrentLanguage === "Indonesia" ? "Kontak" : "Contact"}
 							</a>
 						</div>
 					</div>
 
 					{/* proyek */}
 					<div className="flex flex-col items-center gap-4 lg:items-start lg:gap-6">
-						<p className="text-lg font-bold tracking-wider text-white md:text-xl">Proyek</p>
+						<p className="text-lg font-bold tracking-wider text-white md:text-xl">{CurrentLanguage === "Indonesia" ? "Proyek" : "Projects"}</p>
 						<div className="flex flex-col items-center justify-start gap-2 font-light tracking-wide text-neutral-100 lg:items-start lg:gap-3">
 							<a
 								href="https://movies-react-xi.vercel.app/"

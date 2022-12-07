@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/languages";
 
 const Contact = ({ contactItem }) => {
+	const { CurrentLanguage } = useLanguage();
+
 	return (
 		<div className="transition-all duration-500 dark:bg-dark">
 			<div
@@ -13,7 +16,7 @@ const Contact = ({ contactItem }) => {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 2 }}
 							className="mb-3 text-center text-lg font-semibold text-primary lg:text-xl">
-							Kontak
+							{CurrentLanguage === "Indonesia" ? "Kontak" : "Contact"}
 						</motion.p>
 					)}
 
@@ -23,8 +26,8 @@ const Contact = ({ contactItem }) => {
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 20, damping: 5 }}
 							className="mb-16 flex flex-col items-center justify-center gap-5 lg:mx-72">
-							<p className="text-center text-4xl font-bold tracking-wide text-dark dark:text-white lg:text-5xl">Hubungi Saya</p>
-							<p className="text-center text-base leading-snug text-neutral-500 lg:text-lg">Untuk pertanyaan lebih lanjut, silahkan hubungi Saya.</p>
+							<p className="text-center text-4xl font-bold tracking-wide text-dark dark:text-white lg:text-5xl">{CurrentLanguage === "Indonesia" ? "Hubungi Saya" : "Contact Me"}</p>
+							<p className="text-center text-base leading-snug text-neutral-500 lg:text-lg">{CurrentLanguage === "Indonesia" ? "Untuk pertanyaan lebih lanjut, silahkan hubungi Saya." : "For further questions, please contact Me."}</p>
 						</motion.div>
 					)}
 
@@ -43,7 +46,7 @@ const Contact = ({ contactItem }) => {
 											alt="address"
 											className="w-[40px]"
 										/>
-										<p className="text-xl font-semibold tracking-wide text-primary">Alamat</p>
+										<p className="text-xl font-semibold tracking-wide text-primary">{CurrentLanguage === "Indonesia" ? "Alamat" : "Address"}</p>
 									</motion.div>
 
 									<motion.div
@@ -94,7 +97,7 @@ const Contact = ({ contactItem }) => {
 											alt="telephone"
 											className="w-[40px]"
 										/>
-										<p className="text-xl font-semibold tracking-wide text-primary">Telepon</p>
+										<p className="text-xl font-semibold tracking-wide text-primary">{CurrentLanguage === "Indonesia" ? "Telepon" : "Phone"}</p>
 									</motion.div>
 
 									<motion.div

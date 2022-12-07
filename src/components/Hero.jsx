@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "../context/languages";
 
 const Hero = () => {
+	const { CurrentLanguage } = useLanguage();
+
 	const variantsHero = {
 		hidden: {
 			opacity: 0,
@@ -101,7 +104,7 @@ const Hero = () => {
 						<motion.p
 							variants={variantsHeroChild}
 							className="text-center text-lg font-semibold text-primary md:text-start lg:text-xl">
-							Halo, Saya
+							{CurrentLanguage === "Indonesia" ? "Halo, Saya" : "Hello, I'm"}
 						</motion.p>
 
 						<motion.p
@@ -113,7 +116,7 @@ const Hero = () => {
 						<motion.p
 							variants={variantsHeroChild}
 							className="text-center text-xl font-light text-dark dark:text-white md:text-start lg:text-2xl">
-							<span className="block text-neutral-500 md:inline-block">Mahasiswa &</span> Frontend Web Developer
+							<span className="block text-neutral-500 md:inline-block"> {CurrentLanguage === "Indonesia" ? "Mahasiswa &" : "Student &"}</span> Frontend Web Developer
 						</motion.p>
 					</motion.div>
 
