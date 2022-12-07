@@ -68,7 +68,7 @@ const Footer = ({ footerItem, contactItem }) => {
 
 					{/* media sosial */}
 					<div className="flex flex-col items-center gap-4 lg:items-start lg:gap-6">
-						<p className="text-xl font-bold tracking-wider text-white">Media Sosial</p>
+						<p className="text-xl font-bold tracking-wider text-white">{CurrentLanguage === "Indonesia" ? "Media Sosial" : "Social Media"}</p>
 						<div className="flex flex-row items-center justify-start gap-3 font-light tracking-wide text-neutral-100 lg:items-start">
 							<a
 								href="https://www.instagram.com/andhikarhmt_/"
