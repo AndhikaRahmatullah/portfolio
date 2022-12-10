@@ -116,7 +116,7 @@ const Hero = () => {
 						<motion.p
 							variants={variantsHeroChild}
 							className="text-center text-xl font-light text-dark dark:text-white md:text-start lg:text-2xl">
-							<span className="block text-neutral-500 md:inline-block"> {CurrentLanguage === "Indonesia" ? "Mahasiswa &" : "Student &"}</span> Frontend Web Developer
+							<span className="block text-neutral-500 md:inline-block"> {CurrentLanguage === "Indonesia" ? "Mahasiswa &" : "Student &"}</span> Web Developer
 						</motion.p>
 					</motion.div>
 

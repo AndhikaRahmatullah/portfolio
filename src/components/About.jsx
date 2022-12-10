@@ -47,7 +47,7 @@ const About = ({ aboutItem }) => {
 							transition={{ duration: 1, delay: 1, type: "spring", stiffness: 20, damping: 5 }}
 							className="flex flex-col justify-center gap-3 lg:w-[600px]">
 							<p className="text-3xl font-semibold tracking-wide text-dark dark:text-white lg:text-4xl">
-								Frontend <span className="block">Web Developer</span>
+								Web <span className="block">Developer</span>
 							</p>
 							<p className="text-base leading-snug text-neutral-500 lg:text-lg">{CurrentLanguage === "Indonesia" ? "Memiliki kemampuan dalam Bahasa Pemrograman Javascript. Dengan library React atau Vue pada bagian Frontend yang saya gunakan untuk Website yang dikembangkan." : "Have ability in Javascript Programming Language. With the React or Vue library on the Frontend section that I use for the developed Website."}</p>
 						</motion.div>
