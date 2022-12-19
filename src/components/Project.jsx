@@ -26,17 +26,19 @@ const Project = ({ projectItem, projectItem2 }) => {
 						transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 20, damping: 5 }}
 						className="mb-8 flex flex-col items-center justify-center gap-5 lg:mx-72 lg:mb-16">
 						<p className="text-center text-4xl font-bold tracking-wide text-dark dark:text-white lg:text-5xl">{CurrentLanguage === "Indonesia" ? "Proyek Terbaru" : "Recent Project"}</p>
+
 						<p className="text-center text-base leading-snug text-neutral-500 lg:text-lg">{CurrentLanguage === "Indonesia" ? "Berikut beberapa Website yang telah saya kembangkan baik dalam bentuk Aplikasi Website maupun Website Statis." : "Here are some Websites that I have developed both in the form of Website Applications and Static Websites."}</p>
 					</motion.div>
 				)}
 
+				{/* weather app */}
 				<div className="mb-5 flex flex-col items-center justify-center gap-6 lg:flex-row">
 					{projectItem && (
 						<motion.img
 							initial={{ opacity: 0, x: 100 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1, delay: 1, type: "spring", stiffness: 20, damping: 5 }}
-							src={require("../assets/movsea1.png")}
+							src={require("../assets/weather1.png")}
 							alt="movie search"
 							className="h-[200px] w-[470px] rounded-lg shadow-md lg:h-[260px] lg:w-[490px]"
 						/>
@@ -47,7 +49,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 							initial={{ opacity: 0, x: 100 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1, delay: 1.5, type: "spring", stiffness: 20, damping: 5 }}
-							src={require("../assets/movsea2.png")}
+							src={require("../assets/weather2.png")}
 							alt="movie search 2"
 							className="h-[200px] w-[470px] rounded-lg shadow-md lg:h-[260px] lg:w-[490px]"
 						/>
@@ -60,8 +62,9 @@ const Project = ({ projectItem, projectItem2 }) => {
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 1, delay: 2, type: "spring", stiffness: 20, damping: 5 }}
 						className="flex flex-col items-center justify-center gap-2 lg:mx-[150px]">
-						<p className="text-center text-xl font-semibold tracking-wide text-dark dark:text-white lg:text-2xl">Movie Search</p>
-						<p className="text-justify text-base text-neutral-500 lg:text-center">{CurrentLanguage === "Indonesia" ? "Sebuah Aplikasi Website untuk pecarian film yang sedang tayang, maupun sudah tayang diberbagai belahan Dunia. Tampilan yang sederhana namun elegan dengan balutan efek transisi pada tampilan awal disetiap halaman. Tidak lupa juga fitur 'Detail Film' pada setiap film yang berisi beberapa data tetang film tersebut." : "A website application for searching for films that are currently showing or have already been shown in various parts of the world. A simple but elegant display with a transition effect on the initial appearance of each page. Don't forget the 'Details Movie' feature for each film which contains some data about the film."}</p>
+						<p className="text-center text-xl font-semibold tracking-wide text-dark dark:text-white lg:text-2xl">Weather App</p>
+
+						<p className="text-justify text-base text-neutral-500 lg:text-center">{CurrentLanguage === "Indonesia" ? "Sebuah Aplikasi Website untuk yang menyediakan kondisi cuaca terkini di berbagai Kota dan Daerah yang ada di Indonesia. Terdapat lebih dari 6000 lokasi yang dapat di perkirakan cuacanya. Sumber data yang kami gunakan dari Open Weather Map API." : "A website application for providing the latest weather conditions in various cities and regions in Indonesia. There are more than 6000 locations where the weather can be predicted. The data source we use is from the Open Weather Map API."}</p>
 
 						<motion.a
 							initial={{ opacity: 0, y: 100 }}
@@ -88,7 +91,57 @@ const Project = ({ projectItem, projectItem2 }) => {
 					</motion.p>
 				)}
 
-				<div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-start">
+				<div className="flex flex-wrap items-center justify-center gap-10 lg:items-start">
+					{/* movie search */}
+					<div className="flex flex-col gap-3 lg:w-[490px]">
+						{/* gambar */}
+						{projectItem2 && (
+							<motion.img
+								initial={{ opacity: 0, x: 100 }}
+								animate={{ opacity: 1, x: 0 }}
+								transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 20, damping: 5 }}
+								src={require("../assets/movsea1.png")}
+								alt="movie search"
+								className="h-[200px] w-full rounded-lg shadow-md md:h-[240px] md:w-[470px] lg:h-[260px] lg:w-[490px]"
+							/>
+						)}
+
+						{/* deskripsi */}
+						<div className="flex flex-col items-start justify-between gap-2">
+							<div className="flex flex-col gap-2">
+								{projectItem2 && (
+									<>
+										<motion.p
+											initial={{ opacity: 0, x: 100 }}
+											animate={{ opacity: 1, x: 0 }}
+											transition={{ duration: 1, delay: 1, type: "spring", stiffness: 20, damping: 5 }}
+											className="text-lg font-semibold tracking-wide text-dark dark:text-white lg:text-xl">
+											Movie Search
+										</motion.p>
+
+										<motion.p
+											initial={{ opacity: 0, x: 100 }}
+											animate={{ opacity: 1, x: 0 }}
+											transition={{ duration: 1, delay: 1.5, type: "spring", stiffness: 20, damping: 5 }}
+											className="text-justify text-base leading-snug text-neutral-500">
+											{CurrentLanguage === "Indonesia" ? "Sebuah Aplikasi Website untuk pecarian film yang sedang tayang, maupun sudah tayang diberbagai belahan Dunia. Tampilan yang sederhana namun elegan dengan balutan efek transisi pada tampilan awal disetiap halaman. Tidak lupa juga fitur 'Detail Film' pada setiap film yang berisi beberapa data tetang film tersebut." : "A website application for searching for films that are currently showing or have already been shown in various parts of the world. A simple but elegant display with a transition effect on the initial appearance of each page. Don't forget the 'Details Movie' feature for each film which contains some data about the film."}
+										</motion.p>
+
+										<motion.a
+											initial={{ opacity: 0, y: 100 }}
+											animate={{ opacity: 1, y: 0 }}
+											transition={{ duration: 1, delay: 2.5, type: "spring", stiffness: 20, damping: 5 }}
+											href="https://movies-react-xi.vercel.app/"
+											target="_blank"
+											className="w-fit text-sm font-semibold tracking-wide text-primary lg:text-base">
+											{CurrentLanguage === "Indonesia" ? "Lihat Selengkapnya" : "See More"}
+										</motion.a>
+									</>
+								)}
+							</div>
+						</div>
+					</div>
+
 					{/* share story */}
 					<div className="flex flex-col gap-3 lg:w-[490px]">
 						{/* gambar */}
