@@ -39,7 +39,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1, delay: 1, type: "spring", stiffness: 20, damping: 5 }}
 							src={require("../assets/weather1.png")}
-							alt="movie search"
+							alt=" weather app"
 							className="h-[200px] w-[470px] rounded-lg shadow-md lg:h-[260px] lg:w-[490px]"
 						/>
 					)}
@@ -50,7 +50,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1, delay: 1.5, type: "spring", stiffness: 20, damping: 5 }}
 							src={require("../assets/weather2.png")}
-							alt="movie search 2"
+							alt=" weather app 2"
 							className="h-[200px] w-[470px] rounded-lg shadow-md lg:h-[260px] lg:w-[490px]"
 						/>
 					)}
@@ -149,7 +149,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 							<motion.img
 								initial={{ opacity: 0, x: 100 }}
 								animate={{ opacity: 1, x: 0 }}
-								transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 20, damping: 5 }}
+								transition={{ duration: 1, delay: 3.5, type: "spring", stiffness: 20, damping: 5 }}
 								src={require("../assets/sherstor1.png")}
 								alt="share story"
 								className="h-[200px] w-full rounded-lg shadow-md md:h-[240px] md:w-[470px] lg:h-[260px] lg:w-[490px]"
@@ -164,7 +164,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 										<motion.p
 											initial={{ opacity: 0, x: 100 }}
 											animate={{ opacity: 1, x: 0 }}
-											transition={{ duration: 1, delay: 1, type: "spring", stiffness: 20, damping: 5 }}
+											transition={{ duration: 1, delay: 4, type: "spring", stiffness: 20, damping: 5 }}
 											className="text-lg font-semibold tracking-wide text-dark dark:text-white lg:text-xl">
 											Share Story
 										</motion.p>
@@ -172,7 +172,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 										<motion.p
 											initial={{ opacity: 0, x: 100 }}
 											animate={{ opacity: 1, x: 0 }}
-											transition={{ duration: 1, delay: 1.5, type: "spring", stiffness: 20, damping: 5 }}
+											transition={{ duration: 1, delay: 4.5, type: "spring", stiffness: 20, damping: 5 }}
 											className="text-justify text-base leading-snug text-neutral-500">
 											{CurrentLanguage === "Indonesia" ? "Sebuah Aplikasi Website berbentuk forum untuk berbagi cerita antar User yang menggunakan Aplikasi tersebut. Dengan fitur realtime data, status atau pesan akan otomatis terupdate tanpa direfresh, walaupun sedang digunakan oleh beberapa akun berbeda." : "A website application is in the form of a forum to share stories between users who use the application. With the realtime data feature, status or messages will be updated automatically without being refreshed, even though they are being used by several different accounts."}
 										</motion.p>
@@ -180,7 +180,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 										<motion.a
 											initial={{ opacity: 0, y: 100 }}
 											animate={{ opacity: 1, y: 0 }}
-											transition={{ duration: 1, delay: 2.5, type: "spring", stiffness: 20, damping: 5 }}
+											transition={{ duration: 1, delay: 5.5, type: "spring", stiffness: 20, damping: 5 }}
 											href="https://belalang-biru-reborn-master.vercel.app/"
 											target="_blank"
 											className="w-fit text-sm font-semibold tracking-wide text-primary lg:text-base">
@@ -199,7 +199,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 							<motion.img
 								initial={{ opacity: 0, x: 100 }}
 								animate={{ opacity: 1, x: 0 }}
-								transition={{ duration: 1, delay: 3.5, type: "spring", stiffness: 20, damping: 5 }}
+								transition={{ duration: 1, delay: 6.5, type: "spring", stiffness: 20, damping: 5 }}
 								src={require("../assets/ecom1.png")}
 								alt="ecommerce"
 								className="h-[200px] w-full rounded-lg shadow-md md:h-[240px] md:w-[470px] lg:h-[260px] lg:w-[490px]"
@@ -214,7 +214,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 										<motion.p
 											initial={{ opacity: 0, x: 100 }}
 											animate={{ opacity: 1, x: 0 }}
-											transition={{ duration: 1, delay: 4, type: "spring", stiffness: 20, damping: 5 }}
+											transition={{ duration: 1, delay: 7, type: "spring", stiffness: 20, damping: 5 }}
 											className="text-lg font-semibold tracking-wide text-dark dark:text-white lg:text-xl">
 											E-Commerce
 										</motion.p>
@@ -222,7 +222,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 										<motion.p
 											initial={{ opacity: 0, x: 100 }}
 											animate={{ opacity: 1, x: 0 }}
-											transition={{ duration: 1, delay: 4.5, type: "spring", stiffness: 20, damping: 5 }}
+											transition={{ duration: 1, delay: 7.5, type: "spring", stiffness: 20, damping: 5 }}
 											className="text-justify text-base leading-snug text-neutral-500">
 											{CurrentLanguage === "Indonesia" ? "Sebuah Aplikasi Website dengan tema Toko Online. Seperti Toko Online pada umumnya, didalamnya terdapat fitur seperti Detail Produk, Keranjang, Kategori serta Halaman Pembayaran." : "A Website Application with an Online Store theme. Like online stores in general, it includes features such as product details, baskets, categories and payment pages."}
 										</motion.p>
@@ -230,7 +230,7 @@ const Project = ({ projectItem, projectItem2 }) => {
 										<motion.a
 											initial={{ opacity: 0, y: 100 }}
 											animate={{ opacity: 1, y: 0 }}
-											transition={{ duration: 1, delay: 5.5, type: "spring", stiffness: 20, damping: 5 }}
+											transition={{ duration: 1, delay: 8.5, type: "spring", stiffness: 20, damping: 5 }}
 											href="http://www.shepiedika.byethost7.com/?i=1"
 											target="_blank"
 											className="w-fit text-sm font-semibold tracking-wide text-primary lg:text-base">
@@ -239,6 +239,44 @@ const Project = ({ projectItem, projectItem2 }) => {
 									</>
 								)}
 							</div>
+						</div>
+					</div>
+
+					{/* see github */}
+					<div className="mt-10 flex w-full items-center justify-start lg:w-[490px] xl:h-[406px] xl:justify-center">
+						<div className="flex flex-col items-start justify-center gap-5 lg:items-center">
+							{projectItem2 && (
+								<>
+									<motion.p
+										initial={{ opacity: 0, x: 100 }}
+										animate={{ opacity: 1, x: 0 }}
+										transition={{ duration: 1, delay: 9.5, type: "spring", stiffness: 20, damping: 5 }}
+										className="text-left text-xl font-semibold tracking-wide text-dark dark:text-white lg:text-center lg:text-4xl">
+										{CurrentLanguage === "Indonesia" ? "Untuk melihat lebih banyak, Silahkan kunjungi Github" : "To see more, please visit my Github page"}
+									</motion.p>
+
+									<div className="flex flex-row items-center">
+										<motion.img
+											initial={{ opacity: 0, y: 100 }}
+											animate={{ opacity: 1, y: 0 }}
+											transition={{ duration: 1, delay: 10, type: "spring", stiffness: 20, damping: 5 }}
+											src="https://img.icons8.com/glyph-neue/512/github.png"
+											alt="github"
+											className="w-[45px] rounded-full opacity-80 lg:w-[50px]"
+										/>
+
+										<motion.a
+											initial={{ opacity: 0, y: 100 }}
+											animate={{ opacity: 1, y: 0 }}
+											transition={{ duration: 1, delay: 10.5, type: "spring", stiffness: 20, damping: 5 }}
+											href="https://github.com/AndhikaRahmatullah	"
+											target="_blank"
+											className="w-fit text-base font-semibold tracking-wider text-[#24292f] dark:text-white lg:text-lg">
+											AndhikaRahmatullah
+										</motion.a>
+									</div>
+								</>
+							)}
 						</div>
 					</div>
 				</div>
